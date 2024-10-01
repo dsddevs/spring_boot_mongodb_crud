@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: products
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.MongoClientFactoryBean: DEBUG
